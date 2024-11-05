@@ -1,0 +1,17 @@
+name: CiCd-S3-Runner
+
+on:
+  push:
+    branches: [ main ]
+      
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Start Build Process"
+
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - run: ls
